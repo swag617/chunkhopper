@@ -1,0 +1,97 @@
+# =====================================================
+#  ChunkHopper Configuration
+#  Cleaned & optimized for Hybrid Memory System
+#  -----------------------------------------------------
+#  Notes:
+#   • All hopper data is stored in RAM for speed
+#   • Data is saved to hoppers.yml on a timer
+#   • GUI filter supports up to 14 items (default)
+# =====================================================
+
+config-version: 1
+
+# ------------------------------
+# Hopper Limits
+# ------------------------------
+
+# Maximum chunk hoppers allowed per chunk
+# Use: -1 for unlimited
+max-hoppers-per-chunk: 1
+
+# ------------------------------
+# Collection Behavior
+# ------------------------------
+
+# Should chunk hoppers instantly collect spawned items?
+# If disabled, hopper behaves like a normal hopper (not recommended)
+instant-collection: true
+
+# ------------------------------
+# Autosave System
+# ------------------------------
+
+# How often (in seconds) the plugin saves hopper data to file.
+# 30 seconds is recommended; 10–60 is reasonable for any server size.
+autosave-interval: 30
+
+# ------------------------------
+# Filter Settings
+# ------------------------------
+
+# Maximum number of filter items a hopper may store.
+# Default is 21 (the number of slots in the GUI).
+max-filter-items: 21
+
+# ------------------------------
+# Hopper Item Appearance
+# ------------------------------
+
+hopper-item:
+  material: HOPPER
+  name: '&x&7&D&1&4&B&E&lC&x&6&5&3&4&C&1&lh&x&4&D&4&4&B&F&lu&x&3&8&4&F&B&B&ln&x&2&7&5&7&B&3&lk &x&2&B&6&1&9&D&lH&x&3&1&6&5&A&0&lo&x&3&7&6&A&A&3&lp&x&3&D&6&E&A&6&lp&x&4&2&7&3&A&9&le&x&4&8&7&7&A&C&lr'
+  lore:
+    - '&8--------------------'
+    - '&7Collects items throughout the chunk.'
+    - '&7Right-click to customize filters.'
+    - '&8--------------------'
+  glow: true
+
+# ------------------------------
+# Effects
+# ------------------------------
+effects:
+  enabled: true
+
+# ------------------------------
+# Messages
+# ------------------------------
+
+messages:
+
+  hopper-given: '&aYou have been given a Chunk Hopper!'
+  hopper-placed: '&aChunk Hopper activated in this chunk!'
+  hopper-removed: '&cChunk Hopper removed from this chunk.'
+  hopper-limit-reached: '&cThis chunk already has the maximum number of Chunk Hoppers!'
+  config-reloaded: '&aConfiguration reloaded!'
+  no-permission: '&cYou do not have permission to use this command.'
+  no-ownership: '&cYou do not own this Chunk Hopper.'
+  no-trust: '&cYou are not trusted to access this Chunk Hopper.'
+  gp-missing: '&cGriefPrevention is not installed, using default owner rules.'
+  ownership-set: '&aYou are now the owner of this Chunk Hopper.'
+  hopper-full: '&eYour Chunk Hopper at &f{x}&e, &f{y}&e, &f{z}&e is full!'
+
+# ------------------------------
+# Upgrade System
+# ------------------------------
+
+upgrades:
+  void-filter:
+    cost-per-tier: [500, 1000, 1500, 2000, 2500]
+  capacity:
+    cost-per-tier: [1000, 2500, 5000]
+    max-virtual-storage: 100000
+  collection-amount:
+    cost-per-tier: [750, 1500, 3000]
+  radius:
+    cost-per-tier: [2000, 4000, 8000]
+    max-chunks: 3

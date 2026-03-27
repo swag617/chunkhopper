@@ -1,0 +1,22 @@
+name: ChunkHopper
+version: '1.0'
+main: com.swag.chunkhopper.ChunkHopperPlugin
+api-version: '1.21'
+author: swag617
+description: Chunk-wide item collection hopper with optimized hybrid storage.
+
+softdepend:
+  - GriefPrevention
+  - Vault
+
+commands:
+  chunkhopper:
+    description: ChunkHopper admin commands
+    aliases: [ch]
+    usage: /chunkhopper <give|reload|help>
+    permission: chunkhopper.admin
+
+permissions:
+  chunkhopper.admin:
+    description: Allows admin bypass for ChunkHopper
+    default: op
